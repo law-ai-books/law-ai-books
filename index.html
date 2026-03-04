@@ -2,108 +2,91 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مكتبة الذكاء القانوني</title>
 
+<meta name="description" content="مكتبة متخصصة في كتب القانون والذكاء الاصطناعي">
+<meta name="keywords" content="قانون, ذكاء اصطناعي, كتب قانونية">
+<meta name="author" content="Younis Alsadah">
+
 <style>
-
-body{
-margin:0;
-font-family: Arial;
-direction: rtl;
-background: linear-gradient(135deg,#020617,#0f172a);
-color:white;
-text-align:center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    direction: rtl;
 }
 
-.header{
-padding:40px;
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.search{
-padding:14px;
-width:70%;
-border-radius:15px;
-border:none;
-margin-bottom:30px;
+.container {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
 }
 
-.grid{
-display:grid;
-grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-padding:20px;
+.book-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
 
-.card{
-background:#0f172a;
-padding:25px;
-border-radius:20px;
-transition:0.3s;
+.book-card h2 {
+    margin-top: 0;
 }
 
-.card:hover{
-transform:scale(1.05);
+.button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-button{
-padding:14px 25px;
-border:none;
-border-radius:12px;
-background:#2563eb;
-color:white;
-cursor:pointer;
+.button:hover {
+    background-color: #333;
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #111;
+    color: white;
+}
 </style>
 
 </head>
 
 <body>
 
-<div class="header">
-<h2>الكتاب الأول</h2>
+<header>
+    <h1>مكتبة الذكاء القانوني</h1>
+    <p>كتب متخصصة في القانون والذكاء الاصطناعي</p>
+</header>
 
-<a href="book1.pdf" download>
-    <button>تحميل الكتاب</button>
-</a>
-<p>كتب في القانون والذكاء الاصطناعي</p>
+<div class="container">
 
-<input class="search" placeholder="ابحث عن كتاب..." onkeyup="searchBook()">
-</div>
-
-<div class="grid" id="books">
-
-<div class="card">
-<h2>⚖️ كتاب القانون الحديث</h2>
-<p>أساسيات القانون بأسلوب عصري</p>
-<button>شراء الآن</button>
-</div>
-
-<div class="card">
-<h2>🤖 الذكاء الاصطناعي والقانون</h2>
-<p>كيف يؤثر الذكاء الاصطناعي على التشريعات</p>
-<button>شراء الآن</button>
-</div>
+    <div class="book-card">
+        <h2>الكتاب الأول: مقدمة في الذكاء الاصطناعي القانوني</h2>
+        <p>كتاب يشرح أساسيات الذكاء الاصطناعي وتطبيقاته في المجال القانوني.</p>
+        <a href="book1.pdf" class="button" download>تحميل الكتاب</a>
+    </div>
 
 </div>
 
-<script>
-
-function searchBook(){
-let input = document.querySelector(".search").value.toLowerCase();
-let cards = document.querySelectorAll(".card");
-
-cards.forEach(card=>{
-if(card.innerText.toLowerCase().includes(input)){
-card.style.display="block";
-}else{
-card.style.display="none";
-}
-});
-}
-
-</script>
+<footer>
+    جميع الحقوق محفوظة © 2026 - Younis Alsadah
+</footer>
 
 </body>
 </html>
